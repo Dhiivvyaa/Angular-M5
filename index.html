@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="restaurantApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div ng-controller="MainController">
+        <!-- Navbar -->
+        <nav>
+            <button ng-click="goToSignUp()">My Info</button>
+            <button ng-click="goToSignUp()">Sign Up</button>
+        </nav>
+        
+        <!-- Content Area -->
+        <div ng-view></div>
+    </div>
+</body>
+</html>

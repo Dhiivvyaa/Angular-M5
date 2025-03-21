@@ -1,0 +1,17 @@
+<h2>My Info</h2>
+<div ng-if="user">
+    <p><strong>Name:</strong> {{ user.firstName }} {{ user.lastName }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Phone:</strong> {{ user.phone }}</p>
+    <p><strong>Favorite Menu Item:</strong> {{ user.favoriteMenuNumber }}</p>
+    <!-- Fetch menu item details from the API and display -->
+    <div ng-if="user.favoriteMenuNumber">
+        <p ng-if="message">No such menu number exists.</p>
+        <img ng-src="{{ user.favoriteMenuImage }}" alt="{{ user.favoriteMenuNumber }}" width="200">
+        <p>{{ user.favoriteMenuTitle }}</p>
+        <p>{{ user.favoriteMenuDescription }}</p>
+    </div>
+</div>
+<div ng-if="!user">
+    <p>{{ message }}</p>
+</div>
